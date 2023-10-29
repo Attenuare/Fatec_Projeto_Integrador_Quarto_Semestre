@@ -8,7 +8,7 @@ class RecycleStatistics extends React.Component {
 
     componentDidMount(){
         let data;
-        axios.get('http://localhost:8000/api-auth')
+        axios.get('http://localhost:8000/materials/getstatistics')
             .then(res => {
                 data = res.data;
                 this.setState({

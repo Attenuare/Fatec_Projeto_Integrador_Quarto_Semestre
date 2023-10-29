@@ -4,5 +4,6 @@ from core.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', RecicleMaterialsView.as_view(), name='materials_path')
+    path('getstatistics/', RecicleMaterialsStatisticsView.as_view(), name='materialstatistics'),
+    path('getmaterials/', RecicleMaterialsView.as_view(), name='materials')
 ]
