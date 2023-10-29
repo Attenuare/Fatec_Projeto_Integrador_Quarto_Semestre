@@ -1,36 +1,25 @@
-import axios from 'axios';
+import RecycleStatistics from './pages/RecycleStatistics';
+import {BrowserRouter as Router,
+  Route, Routes} from "react-router-dom";
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
 import React from 'react';
 
 class App extends React.Component {
-  
-  state = { details: [], }
-
-  componentDidMount(){
-    let data;
-    axios.get('http://localhost:8000')
-      .then(res => {
-        data = res.data;
-        this.setState({
-          details: data
-        });
-      })
-      .catch(err=> { })
-  }
-
   render(){
     return (
-      <div>
-      <header> Materiais recicláveis </header>
-      <hr></hr>
-      {this.state.details.map((output, id) => (
-        <div>
-          <div>
-            <h2>{output}</h2>
-          </div>
-        </div>
-      ))}
+      <div className='App'>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" exact element={<Home/>} />
+            <Route path="/reciclestatistics" exact element={<RecycleStatistics/>} />
+          </Routes>
+          <Footer />
+        </Router>
       </div>
-    )
+    );
   }
 }
 
