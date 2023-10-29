@@ -9,7 +9,7 @@ function Home() {
             <div className='headerHomeContainer'>
                 <h1> Ecoponto </h1>
                 <p> Resíduos em Moedas </p>
-                <Link to="/menu">
+                <Link to="/getmaterials">
                     <button> Reciclar </button>
                 </Link>
             </div>

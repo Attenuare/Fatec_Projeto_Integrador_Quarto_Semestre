@@ -1,4 +1,5 @@
 import RecycleStatistics from './pages/RecycleStatistics';
+import RecycleMaterials from './pages/RecycleMaterials';
 import {BrowserRouter as Router,
   Route, Routes} from "react-router-dom";
 import Navbar from './components/Navbar';
@@ -14,7 +15,8 @@ class App extends React.Component {
           <Navbar />
           <Routes>
             <Route path="/" exact element={<Home/>} />
-            <Route path="/reciclestatistics" exact element={<RecycleStatistics/>} />
+            <Route path="/reciclestatistics" exact element={<RecycleStatistics />} />
+            <Route path="/getmaterials" exact element={<RecycleMaterials />} />
           </Routes>
           <Footer />
         </Router>
