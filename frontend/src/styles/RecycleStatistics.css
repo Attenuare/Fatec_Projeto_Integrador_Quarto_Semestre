@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
 }
-.states .menuTitle {
+.states .statesTitle {
   font-family: cursive;
   font-size: 60px;
 }

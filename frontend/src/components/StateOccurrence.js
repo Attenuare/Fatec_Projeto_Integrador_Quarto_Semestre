@@ -1,6 +1,6 @@
 import React from "react";
 
-function StateOccurence({ state, paper, steel, glass, cooperatives }) {
+function StateOccurrence({ state, paper, steel, glass, cooperatives }) {
     return (
         <div className="stateOccurrence">
             <h1> {state} </h1>
@@ -12,4 +12,4 @@ function StateOccurence({ state, paper, steel, glass, cooperatives }) {
     );
 }
 
-export default StateOccurence;
+export default StateOccurrence;

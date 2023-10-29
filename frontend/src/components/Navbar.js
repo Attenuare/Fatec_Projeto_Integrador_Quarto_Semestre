@@ -22,7 +22,7 @@ function Navbar() {
                     <Link to={"/menu"}> Menu </Link>
                     <Link to={"/sobrenos"}> Sobre nós </Link>
                     <Link to={"/ecoins"}> E-coins </Link>
-                    <Link to={"/recyclestatistics"}> Reciclagem </Link>
+                    <Link to={"/reciclestatistics"}> Reciclagem </Link>
                 </div>
             </div>
             <div className='rightSide'>
@@ -30,7 +30,7 @@ function Navbar() {
                 <Link to={"/menu"}> Menu </Link>
                 <Link to={"/sobrenos"}> Sobre nós </Link>
                 <Link to={"/ecoins"}> E-coins </Link>
-                <Link to={"/recyclestatistics"}> Reciclagem </Link>
+                <Link to={"/reciclestatistics"}> Reciclagem </Link>
                 <button onClick={toggleNavbar}>
                     <ReorderIcon />
                 </button>

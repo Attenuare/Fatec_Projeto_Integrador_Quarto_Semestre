@@ -1,22 +1,22 @@
-import StateOccurence from '../components/StateOccurrence'
+import StateOccurrence from '../components/StateOccurrence'
 import "../styles/RecycleStatistics.css";
 import React from 'react';
 import axios from 'axios';
 
 class RecycleStatistics extends React.Component {
-    state = { details: [], }
+    state = { details: [], };
 
     componentDidMount(){
-    let data;
-    axios.get('http://localhost:8000/api-auth')
-        .then(res => {
-            data = res.data;
-            this.setState({
-                details: data
-            });
-        })
-        .catch(err=> { })
-    }
+        let data;
+        axios.get('http://localhost:8000/api-auth')
+            .then(res => {
+                data = res.data;
+                this.setState({
+                    details: data
+                });
+            })
+            .catch(err=> { console.error("Error fetching data:", err); });
+    };
 
     render(){
         return (
@@ -25,7 +25,7 @@ class RecycleStatistics extends React.Component {
                 <div className="stateList">
                     {this.state.details.map((stateOccurrence, key) => {
                         return (
-                            <StateOccurence
+                            <StateOccurrence
                                 key={key}
                                 state={stateOccurrence.state}
                                 paper={stateOccurrence.paper}
@@ -38,7 +38,7 @@ class RecycleStatistics extends React.Component {
                 </div>
             </div>
         );
-    }
+    };
 }
 
 export default RecycleStatistics;
